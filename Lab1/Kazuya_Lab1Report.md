@@ -7,7 +7,7 @@
 > Because the command 'cd' moves the working directory to whatever is specified, leaving no arguments makes it default to the root directory or /home.
 > There were no errors
 ---
-![Image](images/cd3.png)
+![Image](images/cd2.png)
 ![Image](images/cd3.png)
 ![Image](images/ls1.png)
 ![Image](images/ls2.png)
