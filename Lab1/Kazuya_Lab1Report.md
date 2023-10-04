@@ -1,3 +1,3 @@
 # Lab Report 1                          Kazuya Miyata 
 
-![Image](cd1.png)
+![Image](images/cd1.png)
