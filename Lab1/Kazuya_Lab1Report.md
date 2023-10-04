@@ -1,5 +1,7 @@
 # Lab Report 1                          Kazuya Miyata 
 
+##Using the cd command  
+
 ![Image](images/cd1.png)
 
 **Working Directory: /home/lecture1**  
@@ -18,7 +20,9 @@
 **Working Directory: /home**  
 
 >This attempt to cd to a java file resulted in an error because a file is not a directory and therefore it can not be made the working directory
----
+---  
+##Using the ls command  
+
 ![Image](images/ls1.png)  
 **Working Directory: /home/lecture1**  
 
@@ -37,6 +41,8 @@
 > While not an error, because a file cannot have subdirectories/files the ls command just lists its path when specified a file instead of a directory. 
 > There were no errors
 ---
+##Using the cat command  
+
 ![Image](images/cat1.png)
 **Working Directory: /home**  
 
