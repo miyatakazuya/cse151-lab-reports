@@ -46,3 +46,7 @@ class StringServer {
     }
 }
 ```
+
+**Examples of the code Working**  
+![Image](images/lab2_1.png)  
+![Image](images/lab2_2.png) 
