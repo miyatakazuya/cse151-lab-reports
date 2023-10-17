@@ -6,7 +6,7 @@
 
 **Working Directory: /home/lecture1**  
 
->Because the command 'cd' moves the working directory to whatever is specified, leaving no arguments makes it default to the root directory or /home. There were no errors
+>Because the command 'cd' moves the working directory to whatever is specified, leaving no arguments makes it default to the working directory of the terminal which is /home. There were no errors
 
 ![Image](images/cd4.png)  
 
@@ -40,7 +40,7 @@
 ## Using the cat command  
 
 ![Image](images/cat1.png)  
-**Working Directory: /home**    
+**Working Directory: /home/lecture1**    
 
 > The command prompt bugs out as the lack of argument in the cat command creates an infinite prompt until terminated. 
 
