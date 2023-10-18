@@ -64,7 +64,7 @@ class StringServer {
 
 ## Part 2  
 ![Image](images/Lab2_3.png)  
-* By using ls to show the files under /Users/kazuy/.ssh, it reveals that the private key for the SSH key is in the path "\Users\kazuy\.ssh\id_rsa"
+* By using ls to show the files under /Users/kazuy/.ssh, it reveals that the private key for the SSH key is in the path "\Users\kazuy\.ssh\id_rsa"  
 ![Image](images/Lab2_4.png)
 * In the ieng6 account, using ls shows that the public key for my SSH key is under "/home/linux/ieng6/cs15lfa23/cs15lfa23ou/.ssh/authorized_keys"
 ![Image](images/Lab2_5.png)
