@@ -49,4 +49,9 @@ class StringServer {
 
 **Examples of the code Working**  
 ![Image](images/lab2_1.png)  
-![Image](images/lab2_2.png) 
+* handleRequest is the method that is called when it is called
+* The method takes in a single URI as an argument which contains the url that is ran, which in this case is "http://localhost:1212/add-message?s=World"
+* The String parameter would change to contain the 2 sides of the query separated by "=" which makes the value of the parameter array ["s", "Hello"]
+* Because the taken URI argument is formatted correctly, the value of num is incremented from 0 to 1.
+* For the same reason the string output is concatenated with the value of num and parameter[1] which contains the specified input, making its value "\n1. Hello"
+![Image](images/Lab2_2.png) 
