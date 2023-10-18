@@ -64,6 +64,12 @@ class StringServer {
 
 ## Part 2  
 ![Image](images/Lab2_3.png)  
-![Image](images/Lab2_4.png)  
-![Image](images/Lab2_5.png)  
+* By using ls to show the files under /Users/kazuy/.ssh, it reveals that the private key for the SSH key is in the path "\Users\kazuy\.ssh\id_rsa"
+![Image](images/Lab2_4.png)
+* In the ieng6 account, using ls shows that the public key for my SSH key is under "/home/linux/ieng6/cs15lfa23/cs15lfa23ou/.ssh/authorized_keys"
+![Image](images/Lab2_5.png)
+* After using ssh to connect to my ieng6 account, I can login without entering a password.
+
+## Part 3
+> I had never worked with ssh so being able to remotely connect to other resources through my computer is a new experience. I was able to use ssh in a club to access the UCSD computing resources. I also learned how to run and host servers locally and the knowledge of how a url is broken down as paths and queries was very useful information. 
 
