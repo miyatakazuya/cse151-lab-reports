@@ -1,6 +1,6 @@
 # Lab Report 2                          Kazuya Miyata
 
-# String Server Implementation:  
+## String Server Implementation:  
 ```
 import java.io.IOException;
 import java.net.URI;
