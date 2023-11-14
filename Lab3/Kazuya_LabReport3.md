@@ -100,7 +100,7 @@ public class ArrayExamples {
 
 * Analysis: The original method fails to pass the failure-inducing input because when overriding the value of [0] in the array, the value overriden is not actually switched with the other value. So in the failure inducing input above, when the index of [2] overrides [0], the contents of the input become  [3, 2, 3]. The method terminates here, meaning the test fails because the value at [2] is never properly switched out.
 
-## Part 2 - Researching Commands (Command: Find)
+## Part 2 - Researching Commands (Command: `Find`)
 The basic usage of the command `find` is:   
 * find <path>
 but there are several other specific command-line tools that can be used to perform more specific tasks.
