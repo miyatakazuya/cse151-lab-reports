@@ -102,7 +102,7 @@ public class ArrayExamples {
 
 ## Part 2 - Researching Commands (Command: `Find`)
 The basic usage of the command `find` is:   
-* find <path>
+* `find` \<path\>
 but there are several other specific command-line tools that can be used to perform more specific tasks.
 
 ### 1. **-name** 
@@ -156,7 +156,7 @@ government/About_LSC/Strategic_report.txt
 ```
 > This demonstrates another way to use -name. By using the * operator, the command-line can be used to locate files with names that end with a specific filetype like txt.
 
-### 2. **-size** <n>[c]  
+### 2. **-size** \<n\>[c]  
 Source: https://linux.die.net/man/1/find  
 * Narrows down the search to files within a certain parameter based off file-size. You must specifcy a unit with 'c' representing bytes, 'k' for kilobytes, 'M' for megabytes, and 'G' for gigabytes. The + or - operator should be added to specify if the results should be less than or greater than the speficied file size.  
   
@@ -183,7 +183,7 @@ biomed/1471-2490-3-2.txt
 ```
 > In this case the - operator is used to find files within biomed that are less than 10 Kilobytes.  \
 
-### 3. -type <type>  
+### 3. -type \<type\>  
 Source: https://linux.die.net/man/1/find  
 * Used to filter results by filetype (Example 'd' for directories and 'f' for files)  
 
