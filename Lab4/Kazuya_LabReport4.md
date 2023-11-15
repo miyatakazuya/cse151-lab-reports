@@ -26,9 +26,9 @@
 **Explanation:** I go up my history 2 command by clicking the up arroow twice, allowing to run `bash test.sh` again to run the tests.  
 
 ## 6. Commit and push the resulting change to your Github account (you can pick any commit message!)
-**Keys Pressed (1):** `<g> <i> <t> <SPAPCE> <a> <d> <d> <SPACE> <-> <A>`
+**Keys Pressed (1):** `<g> <i> <t> <SPACE> <a> <d> <d> <SPACE> <-> <A>`
 **Explanation  (1):** Add the modified ListExamples.java file to the staging area by using the git add command, adding -A to specifcy all modified files.  
-**Keys Pressed (1):** `<g
+**Keys Pressed (1):** `<g> <i> <t> <SPACE> <c> <o> <m> <m> <i> <t> <SPACE> <-> <m> <SPACE> <"> <M> <o> <d> <i> <f> <i> <e> <d> <SPACE> <L> <i> <s> <t> <E> <x> <a> <m> <p> <l> <e> <s> <.> <j> <a> <v> <a> <ENTER> `
 **Explanation  (1):** 
 **Keys Pressed (1):**
 **Explanation  (1):** 
