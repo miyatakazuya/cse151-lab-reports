@@ -163,14 +163,17 @@ class ListExamples {
  
 
 ### Responce #2 (Instructor / TA) 
-> That is an interesting bug. I would recommend ussing jdb to try and debug if any local variables like index1 or index2 is not the value it is supposed to be. Since this may be an infinite loop, use the `suspend` command to pause the threads to see where jdb has stopped in ListExamples.java. This may help you understand where the loop is occuring.   
+> That is an interesting bug. I would recommend ussing jdb to try and debug if any local variables like index1 or index2 is not the value it is supposed to be. Since this may be an infinite loop, use the `suspend` command to pause the threads to see where jdb has stopped in ListExamples.java. This may help you understand where the loop is occuring.
+  
 ```
 jdb <classpath>
 stop at Class:
 ```
 
 ### Final Responce (Student)
->  I followed your advice and ran ListExamplesTests using jdb to debug where my program is going wrong. Here's what i got:  
+>  I followed your advice and ran ListExamplesTests using jdb to debug where my program is going wrong. Here's what i got:
+>
+  
 ```
 [cs15lfa23ou@ieng6-201]:lab7:297$ jdb -classpath .:lib/* org.junit.runner.JUnitCore ListExamplesTests
 Initializing jdb ...
