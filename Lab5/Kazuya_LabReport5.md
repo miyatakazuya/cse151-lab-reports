@@ -4,7 +4,8 @@
 ### **Original Post:**  
 > **Title: My bash script doesn't run on my local computer but works on ieng6.**  
 > I wanted to work on my ListExamples project on ieng6 instead of my local computer so I can work on it remotely. However, when I tried running the test script, this error occurs.
-> Can someone help me identify why my script runs on my computer but not on ieng6? 
+> Can someone help me identify why my script runs on my computer but not on ieng6?
+  
 ```
 [cs15lfa23ou@ieng6-201]:lab7:259$ bash test.sh
 JUnit version 4.13.2
@@ -46,16 +47,16 @@ Error: Could not find or load main class org.junit.runner.JUnitCore
 Caused by: java.lang.ClassNotFoundException: org.junit.runner.JUnitCore
 ```
 
-
-This is my test.sh
+  
+This is my test.sh  
 ```
 javac -cp ".;lib/hamcrest-core-1.3.jar;lib/junit-4.13.2.jar" *.java
 java -cp ".;lib/junit-4.13.2.jar;lib/hamcrest-core-1.3.jar" org.junit.runner.JUnitCore ListExampleTests
 ```
-
+  
 ### Original Responce (Instructor / TA)  
 > First I would make sure that you have commited all the changes on the ieng6 side, and then pull the latest version of your project to ensure you are synched up.
-> Are you on a windows computer? If so this bug might be caused by the difference in syntax between Linux and Windows. Try swapping the test.sh syntax with the appropriate windows syntax (mentioned in week 4):
+> Are you on a windows computer? If so this bug might be caused by the difference in syntax between Linux and Windows. Try swapping the test.sh syntax with the appropriate windows syntax (mentioned in week 4):  
 ```
 javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
@@ -65,7 +66,7 @@ java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnit
 > Thank you that fixed the issue of the tests not running properly. However, my tests is still not outputing the result of the tests as intended. Once I run the bash script, it never returns any out put and I am not sure why. It may be infinite running somewhere but with no output I can't determine in which file or line the program is getting stuck at. 
 >
      
-Terminal Output:
+Terminal Output:  
 ```
 [cs15lfa23ou@ieng6-201]:lab7:291$ bash test.sh
 JUnit version 4.13.2
@@ -73,7 +74,7 @@ JUnit version 4.13.2
 
 (Never outputs anything)
 ```
-ListExampleTests.java:
+ListExampleTests.java:  
 ```
 import static org.junit.Assert.*;
 import org.junit.*;
@@ -104,7 +105,7 @@ public class ListExamplesTests {
         }
 }
 ```
-ListExamples.java:
+ListExamples.java:  
 ```
 import java.util.ArrayList;
 import java.util.List;
@@ -162,14 +163,14 @@ class ListExamples {
  
 
 ### Responce #2 (Instructor / TA) 
-> That is an interesting bug. I would recommend ussing jdb to try and debug if any local variables like index1 or index2 is not the value it is supposed to be. Since this may be an infinite loop, use the `suspend` command to pause the threads to see where jdb has stopped in ListExamples.java. This may help you understand where the loop is occuring. 
+> That is an interesting bug. I would recommend ussing jdb to try and debug if any local variables like index1 or index2 is not the value it is supposed to be. Since this may be an infinite loop, use the `suspend` command to pause the threads to see where jdb has stopped in ListExamples.java. This may help you understand where the loop is occuring.   
 ```
 jdb <classpath>
 stop at Class:
 ```
 
 ### Final Responce (Student)
->  I followed your advice and ran ListExamplesTests using jdb to debug where my program is going wrong. Here's what i got: 
+>  I followed your advice and ran ListExamplesTests using jdb to debug where my program is going wrong. Here's what i got:  
 ```
 [cs15lfa23ou@ieng6-201]:lab7:297$ jdb -classpath .:lib/* org.junit.runner.JUnitCore ListExamplesTests
 Initializing jdb ...
@@ -239,7 +240,7 @@ index1 = 0
 index2 = 2
 ```
 I noticed that index1 was 0, when the program was suspended, meaning that the while loop was infinitely running because it was not being properly incremented. 
-**Fixing ListExamples.java:**
+**Fixing ListExamples.java:**  
 ```
 [cs15lfa23ou@ieng6-201]:lab7:299$ vim ListExamples.java
 ```
@@ -247,7 +248,7 @@ Here I added the missing line that increments the value of the index, fixing the
 + `index1 += 1;`
 
 
-**Ran the Test again to make sure it was fixed: **
+**Ran the Test again to make sure it was fixed: **  
 ```
 [cs15lfa23ou@ieng6-201]:lab7:300$ bash test.sh
 JUnit version 4.13.2
