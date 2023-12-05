@@ -62,7 +62,7 @@ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListExamplesTests
 ```
 
-### Reply #! (From Student)
+### Reply #1 (From Student)
 > Thank you that fixed the issue of the tests not running properly. However, my tests is still not outputing the result of the tests as intended. Once I run the bash script, it never returns any out put and I am not sure why. It may be infinite running somewhere but with no output I can't determine in which file or line the program is getting stuck at. 
 >
      
@@ -242,7 +242,7 @@ result = instance of java.util.ArrayList(id=1027)
 index1 = 0
 index2 = 2
 ```
-I noticed that index1 was 0, when the program was suspended, meaning that the while loop was infinitely running because it was not being properly incremented. 
+I noticed that index1 was 0, when the program was suspended, meaning that the while loop was infinitely running because it was not being properly incremented.  
 **Fixing ListExamples.java:**  
 ```
 [cs15lfa23ou@ieng6-201]:lab7:299$ vim ListExamples.java
@@ -251,7 +251,7 @@ Here I added the missing line that increments the value of the index, fixing the
 + `index1 += 1;`
 
 
-**Ran the Test again to make sure it was fixed: **  
+**Ran the Test again to make sure it was fixed:**  
 ```
 [cs15lfa23ou@ieng6-201]:lab7:300$ bash test.sh
 JUnit version 4.13.2
